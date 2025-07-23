@@ -1,0 +1,32 @@
+--- Túc Mạng Minh: History Search ---
+Search Timestamp: 2025-06-28 15:19:07
+File: .cursor/rules/rule-mottos.mdc
+History Path: /home/fong/.config/Cursor/User/History
+Found 8 historical versions.
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/MJS2.mdc
+Timestamp: 2025-06-28 14:56:55.699000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/xnVH.mdc
+Timestamp: 2025-06-28 14:57:00.057000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/SWJq.mdc
+Timestamp: 2025-06-28 14:59:04.997000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/JpMC.mdc
+Timestamp: 2025-06-28 14:59:52.343000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/sgJG.mdc
+Timestamp: 2025-06-28 15:01:16.912000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/xfzq.mdc
+Timestamp: 2025-06-28 15:01:53.974000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/CFFA.mdc
+Timestamp: 2025-06-28 15:02:00.139000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-71db93e1/rED8.mdc
+Timestamp: 2025-06-28 15:03:27.018000
+-----------------------------------------
+
+Search complete. Listed 8 versions.

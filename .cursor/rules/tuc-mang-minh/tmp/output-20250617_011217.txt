@@ -1,0 +1,20 @@
+--- Túc Mạng Minh: History Search ---
+Search Timestamp: 2025-06-17 01:12:17
+File: .gitignore
+History Path: /home/fong/.config/Cursor/User/History
+Found 4 historical versions.
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-53d812f7/3Xie
+Timestamp: 2025-06-11 00:32:01.938000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-53d812f7/D3mN
+Timestamp: 2025-06-11 23:42:26.474000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-53d812f7/E6l9
+Timestamp: 2025-06-14 01:08:24.359000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-53d812f7/1JuI
+Timestamp: 2025-06-14 01:17:17.057000
+-----------------------------------------
+
+Search complete. Listed 4 versions.

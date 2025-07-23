@@ -1,0 +1,27 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Vietnamese Language Rules
+
+# Quy Tắc Sử Dụng Tiếng Việt
+
+## Ngôn Ngữ Tương Tác
+
+- Luôn luôn trả lời bằng tiếng Việt.
+
+## Phong Cách Viết
+
+- Đảm bảo nội dung dễ hiểu và chính xác.
+- Sử dụng các cụm từ phổ biến trong phát triển web/lập trình.
+- Tránh dịch thuật cứng nhắc các thuật ngữ chuyên ngành.
+
+## Quy tắc trong Code
+
+- **Naming Conventions (Biến, Hàm, File)**: Ưu tiên sử dụng **tiếng Anh** cho tên file, biến, và hàm. Đây là "best practice" trong cộng đồng lập trình toàn cầu, giúp đảm bảo tính nhất quán, dễ đọc, và tránh các lỗi tiềm ẩn về encoding trong môi trường production, bất kể ngôn ngữ lập trình nào được sử dụng.
+- **Comments (Bình luận)**: Có thể sử dụng tiếng Việt có dấu để giải thích các logic phức tạp một cách rõ ràng cho đội ngũ phát triển.
+- **Display Text (Nội dung hiển thị)**: Bắt buộc sử dụng tiếng Việt có dấu cho các nội dung hiển thị cho người dùng cuối.
+
+
+

@@ -1,0 +1,17 @@
+--- Túc Mạng Minh: History Search ---
+Search Timestamp: 2025-06-28 15:19:36
+File: .cursor/rules/rule-align-memory.mdc
+History Path: /home/fong/.config/Cursor/User/History
+Found 3 historical versions.
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/231f4a22/hO3H.mdc
+Timestamp: 2025-06-28 14:51:47.071000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/231f4a22/OuQF.mdc
+Timestamp: 2025-06-28 14:52:30.356000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/231f4a22/jURB.mdc
+Timestamp: 2025-06-28 14:53:05.202000
+-----------------------------------------
+
+Search complete. Listed 3 versions.

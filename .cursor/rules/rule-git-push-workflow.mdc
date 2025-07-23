@@ -1,0 +1,65 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+*Mod by Fong on 2024-06-05--04-31-PM*
+# Quy tắc Git Push Workflow
+
+## Mục đích
+Đảm bảo quy trình push code lên repository thống nhất, hiệu quả và đúng cách.
+
+## Quy tắc bắt buộc
+
+### 1. Thêm tất cả file thay đổi cùng lúc
+- **LUÔN LUÔN** sử dụng lệnh `git add .` để thêm tất cả các file đã thay đổi vào staging area
+- **TUYỆT ĐỐI KHÔNG** thêm từng file riêng lẻ (như `git add file1.txt file2.txt`)
+- **LÝ DO:** Đảm bảo không bỏ sót file, duy trì tính toàn vẹn của commit
+
+### 2. Quy trình commit và push chuẩn
+```bash
+# Bước 1: Thêm tất cả file đã thay đổi
+git add .
+
+# Bước 2: Commit với message rõ ràng
+git commit -m "Message mô tả thay đổi"
+
+# Bước 3: Push lên remote repository
+git push origin branch_name
+```
+
+### 3. Kiểm tra trước khi commit
+- Sử dụng `git status` để xem danh sách các file đã thay đổi
+- Sử dụng `git diff --staged` để xem chi tiết thay đổi trước khi commit
+
+### 4. Xử lý xung đột
+- Nếu có xung đột khi pull/push, giải quyết xung đột trước khi tiếp tục
+- Sử dụng `git pull` trước khi push nếu làm việc trong team
+
+## Lưu ý quan trọng
+- **KHÔNG BAO GIỜ** thêm từng file riêng lẻ trừ khi có yêu cầu đặc biệt và rõ ràng từ người dùng
+- Việc thêm từng file riêng lẻ được coi là không hiệu quả và dễ gây lỗi
+- Luôn commit theo đơn vị logic hoàn chỉnh, không commit code dang dở
+
+## Ví dụ thực hành đúng
+```bash
+# Đúng
+git add .
+git commit -m "Update user authentication and fix CSS issues"
+git push origin main
+
+# Sai
+git add auth.js
+git add styles.css
+git commit -m "Update user authentication and fix CSS issues"
+git push origin main
+```
+
+## Trường hợp ngoại lệ
+Chỉ thêm từng file riêng lẻ khi:
+1. Được yêu cầu rõ ràng bởi người dùng
+2. Cần tách các thay đổi không liên quan thành các commit riêng biệt
+3. Cần loại bỏ một số thay đổi cụ thể khỏi commit
+
+---
+Keywords: git workflow, git push, git add, git commit, quy trình git, thêm file git, commit code, push code, quản lý phiên bản, version control, git best practices, tiêu chuẩn git, git standards, quy tắc git, git rules, git conventions, git add all files, git staging area

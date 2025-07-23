@@ -1,0 +1,192 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+*Mod by Fong on 2025-07-01--22-38-PM*
+
+# 📋 Rule Scan Guidelines | Hướng Dẫn Quét Quy Tắc
+
+## 🎯 **Mục Đích**
+Cung cấp hướng dẫn chi tiết để quét, kiểm tra và liệt kê các quy tắc (rules) trong thư mục `.cursor/rules/`.
+
+**Lưu ý: PHẢI ĐỌC nội dung file motto bằng lệnh `cat` để hiểu rõ.** `cat .cursor/rules/rule-mottos.mdc | tr -d '[:space:]'` trước khi làm bất cứ chuyện gì.
+
+## ⚠️ **QUAN TRỌNG: WORKFLOW BẮT BUỘC** ⚠️
+
+**Đây là quy trình CỐT LÕI và BẮT BUỘC phải tuân theo TRƯỚC KHI thực hiện bất kỳ yêu cầu nào. Việc bỏ qua quy trình này là VI PHẠM NGUYÊN TẮC LÀM VIỆC.**
+
+Mỗi khi nhận một prompt (yêu cầu):
+
+1.  **PHÂN TÍCH YÊU CẦU**: Dừng lại và suy nghĩ. Yêu cầu này về chủ đề gì? (PHP, Database, Refactor, ...). Xác định các từ khóa chính.
+2.  **TÌM QUY TẮC LIÊN QUAN**:
+    *   Sử dụng `tree .cursor/rules/ -P "*.mdc"` để liệt kê tất cả các quy tắc.
+    *   Dựa vào từ khóa đã xác định, **chủ động tìm kiếm** các file `.mdc` có tên liên quan.
+    *   *Ví dụ: Yêu cầu về PHP -> tìm rule có chữ `php`, `psr`, `phpdoc`. Yêu cầu về database -> tìm rule có chữ `db`, `database`, `sql`.*
+3.  **ĐỌC ĐỂ HIỂU**: Đọc kỹ nội dung của các file quy tắc đã tìm thấy để nắm vững định hướng và tiêu chuẩn của hệ thống.
+4.  **HÀNH ĐỘNG**: Chỉ sau khi đã hiểu rõ các quy tắc, mới bắt đầu viết code, chỉnh sửa file, hoặc đưa ra câu trả lời.
+
+**Ví dụ thực tế:**
+> Prompt yêu cầu: "Viết một hàm PHP để lấy dữ liệu người dùng."
+
+**Suy nghĩ của AI (là em):**
+> 1.  **Phân tích**: OK, yêu cầu này về `PHP` và `lấy dữ liệu`.
+> 2.  **Tìm quy tắc**:
+>     *   `tree .cursor/rules/ -P "*.mdc"`
+>     *   Thấy có `rule-php-best-practices.mdc` và `rule-phpdoc-standards.mdc`.
+> 3.  **Đọc hiểu**:
+>     *   `cat .cursor/rules/rule-php-best-practices.mdc | tr -d '[:space:]'`
+>     *   `cat .cursor/rules/rule-phpdoc-standards.mdc | tr -d '[:space:]'`
+>     *   Nắm được các tiêu chuẩn về code style, cách viết PHPDoc.
+> 4.  **Hành động**: Viết code PHP tuân thủ các quy tắc vừa đọc.
+
+**VIỆC TUÂN THỦ QUY TRÌNH NÀY LÀ TUYỆT ĐỐI. KHÔNG ĐƯỢC BỎ BƯỚC.**
+
+## 🧠 **Smart File Reading Logic | Logic Đọc File Thông Minh**
+
+### **Quy Tắc Đọc File Tối Ưu**
+
+**Logic Suy Nghĩ** (không phải bash script):
+
+```
+Bước 1: Kiểm tra số dòng file
+→ wc -l [file-path]
+
+Bước 2: Quyết định cách đọc
+→ Nếu file < 200 LOC: 
+  ✓ Chạy: cat file.mdc | tr -d '[:space:]'
+
+→ Nếu file >= 200 LOC:
+  ✓ Chạy từng lệnh riêng lẻ:
+  ✓ sed -n '1,200p' file.mdc
+  ✓ sed -n '201,400p' file.mdc  
+  ✓ sed -n '401,$p' file.mdc
+```
+
+**Ví dụ thực tế:**
+```bash
+# Kiểm tra trước
+wc -l .cursor/rules/rule-scan-rules.mdc
+# Output: 150 lines → < 200 LOC
+
+# Áp dụng: Đọc với cat remove spaces
+cat .cursor/rules/rule-scan-rules.mdc | tr -d '[:space:]'
+```
+
+### **Lợi Ích Logic Thông Minh**
+- **Performance**: File nhỏ đọc nhanh với `tr -d '[:space:]'` (tiết kiệm token ~17%)
+- **Scalability**: File lớn đọc theo batch để tránh quá tải
+- **Flexibility**: Tự động chọn phương pháp đọc tối ưu
+- **Consistency**: Áp dụng cùng pattern với `__init.mdc`
+
+## 🛠️ **Phương Pháp Quét Rules**
+
+### 1. **Quét Chỉ File .mdc**
+```bash
+tree .cursor/rules/ -P "*.mdc"
+```
+- Hiển thị cây thư mục chỉ với các file .mdc
+- Bỏ qua các thư mục con và file khác
+- Cung cấp cái nhìn tổng quan về tất cả các rules
+
+### 2. **Kiểm Tra Manifest.json**
+```bash
+# Kiểm tra file có tồn tại
+ls -la .cursor/rules/manifest.json
+
+# Áp dụng Smart Reading Logic
+wc -l .cursor/rules/manifest.json
+
+# Nếu < 200 LOC: Đọc trực tiếp
+cat .cursor/rules/manifest.json | tr -d '[:space:]'
+
+# Nếu >= 200 LOC: Đọc theo từng phần
+sed -n '1,200p' .cursor/rules/manifest.json
+sed -n '201,400p' .cursor/rules/manifest.json  
+sed -n '401,$p' .cursor/rules/manifest.json
+```
+
+## 📊 **Cấu Trúc Manifest.json**
+
+File `manifest.json` chứa:
+- **rules_count**: Tổng số rules
+- **rules_directory**: Đường dẫn thư mục rules
+- **rules_details**: Array các object với:
+  - `filename`: Tên file rule
+  - `summary`: Tóm tắt nội dung rule
+
+## 🔍 **Workflow Scan Rules**
+
+### **Bước 1**: Quét file .mdc
+```bash
+tree .cursor/rules/ -P "*.mdc"
+```
+
+### **Bước 2**: Đọc manifest để hiểu nội dung
+```bash
+# Kiểm tra kích thước
+wc -l .cursor/rules/manifest.json
+
+# Áp dụng Smart Reading Logic
+if [[ $(wc -l < .cursor/rules/manifest.json) -lt 200 ]]; then
+    # File nhỏ: Đọc trực tiếp với token optimization
+    cat .cursor/rules/manifest.json | tr -d '[:space:]'
+else
+    # File lớn: Đọc theo window sliding (200 LOC mỗi lần)
+    sed -n '1,200p' .cursor/rules/manifest.json
+    # ... tiếp tục với các phần tiếp theo
+fi
+```
+
+### **Bước 3**: Phân loại rules theo chức năng
+- **Documentation Standards**: diagram, documentation references
+- **Development Standards**: PHP, JS standards, debugging
+- **Memory Management**: DKM get/set, memory alignment
+- **File Organization**: architecture, naming conventions
+- **Safety & Quality**: database safety, double check
+
+## 🎯 **Ứng Dụng Thực Tế**
+
+### **Khi nào sử dụng?**
+- Cập nhật danh sách "Quy Tắc Liên Quan" trong task
+- Kiểm tra rules mới được thêm
+- Verify rules thực tế tồn tại
+- Hiểu overview về hệ thống rules
+
+### **Best Practices**
+1. **Luôn scan thực tế** thay vì assumption
+2. **Đọc manifest** để hiểu nội dung rules
+3. **Phân loại** rules theo chức năng
+4. **Update** danh sách rules trong task documents
+
+## 🚨 **Lưu Ý Quan Trọng**
+
+- **Tree filter**: Sử dụng `-P "*.mdc"` để chỉ hiển thị file .mdc
+- **Window sliding**: Dùng `sed` để đọc file dài theo từng phần (200 LOC mỗi lần)
+- **Manifest check**: Luôn kiểm tra manifest.json để hiểu nội dung
+- **Relative path**: Chạy từ project root để đảm bảo đường dẫn đúng
+
+## 📝 **Template Command Sequence**
+
+```bash
+# 1. Navigate to project root
+cd /path/to/project
+
+# 2. Scan .mdc files only  
+tree .cursor/rules/ -P "*.mdc"
+
+# 3. Apply Smart Reading Logic
+wc -l .cursor/rules/manifest.json
+
+# 4. Read based on file size
+if [[ $(wc -l < .cursor/rules/manifest.json) -lt 200 ]]; then
+    cat .cursor/rules/manifest.json | tr -d '[:space:]'
+else
+    sed -n '1,200p' .cursor/rules/manifest.json
+fi
+```
+
+---
+**Created**: $(date '+%Y-%m-%d %H:%M:%S')  
+**Purpose**: Hướng dẫn quét và phân tích rules trong .cursor/rules/  
+**Status**: Active

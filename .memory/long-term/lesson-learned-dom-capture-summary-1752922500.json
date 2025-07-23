@@ -1,0 +1,79 @@
+{
+  "title": "Lesson Learned: DOM Capture Project Development Summary",
+  "description": "Summary of the development process for the web-dom-capture project, detailing the architectural pivot from a pure Chrome extension to a client-server model with a Python Flask backend. Includes key decisions, debugging steps, and final implementation details.",
+  "created_at": [
+    "2025-07-19--01-55-AM",
+    1752922500
+  ],
+  "updated_at": [
+    "2025-07-19--01-55-AM",
+    1752922500
+  ],
+  "importance": 0.7,
+  "lesson": {
+    "what": "Developed a tool to capture a webpage's DOM and save it locally.",
+    "why": "To create a simple, robust, and automated way of saving web page structures for analysis, after an initial attempt using the File System Access API proved too complex and unreliable.",
+    "how": "The architecture was pivoted to a client-server model. The Chrome Extension acts as a client, capturing the DOM and sending it via a POST request to a local Python Flask server. The server then handles saving the content to a local file, managing file rotation, and prepending instructions.",
+    "learnings": "For tasks involving local file system interaction from a browser extension, a local server model can be significantly simpler and more reliable (KISS principle) than using browser-native APIs like File System Access, which have heavy security restrictions and complex persistence logic."
+  },
+  "actionable_checklist": [
+    {
+      "item": "Chrome extension captures and sends DOM upon icon click.",
+      "status": "completed"
+    },
+    {
+      "item": "Python Flask server receives and saves DOM to 'captured_doms/' directory.",
+      "status": "completed"
+    },
+    {
+      "item": "Configuration is managed in 'py-server/config.py'.",
+      "status": "completed"
+    },
+    {
+      "item": "Server management scripts (start/stop) are available.",
+      "status": "completed"
+    },
+    {
+      "item": "Server response includes file path and instructions, which are copied to the clipboard.",
+      "status": "completed"
+    }
+  ],
+  "related_files": [
+    {
+      "file_name": "popup.js",
+      "relationship": "Client-side logic for the Chrome Extension."
+    },
+    {
+      "file_name": "py-server/main.py",
+      "relationship": "Main application logic for the Flask server."
+    },
+    {
+      "file_name": "py-server/config.py",
+      "relationship": "Configuration file for the server."
+    }
+  ],
+  "tags": [
+    "chrome-extension",
+    "python",
+    "flask",
+    "server",
+    "dom-capture",
+    "javascript",
+    "file-system-access",
+    "debugging",
+    "refactoring",
+    "client-server-architecture",
+    "web-development",
+    "automation",
+    "tiện-ích-chrome",
+    "máy-chủ-python",
+    "chụp-dom",
+    "tự-động-hóa",
+    "gỡ-lỗi",
+    "tái-cấu-trúc",
+    "kiến-trúc-client-server",
+    "lập-trình-web",
+    "lưu-file-cục-bộ"
+  ],
+  "version": "1.0"
+} 

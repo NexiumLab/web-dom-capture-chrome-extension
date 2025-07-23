@@ -1,0 +1,23 @@
+--- Túc Mạng Minh: History Search ---
+Search Timestamp: 2025-06-17 01:13:09
+File: .gitignore
+History Path: /home/fong/.config/Cursor/User/History
+Search Text: '__pycache__'
+Found 5 versions to search...
+-----------------------------------------
+Found matches in: /home/fong/.config/Cursor/User/History/-53d812f7/Xtlw
+Timestamp: 2025-06-17 01:07:43.534000
+...
+   1 | # Bỏ qua các file AppImage và thư mục archive vì vượt quá giới hạn 100MB của GitHub
+   2 | *.AppImage
+   3 | 
+   4 | # Python
+>   5 | **/__pycache__/
+   6 | *.pyc
+   7 | *.pyo
+   8 | *.pyd
+   9 | 
+  10 | # Temp files
+=========================================
+
+Search complete. Found 1 files with matches.

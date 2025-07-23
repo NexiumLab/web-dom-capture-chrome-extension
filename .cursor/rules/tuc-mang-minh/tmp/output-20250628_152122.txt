@@ -1,0 +1,11 @@
+--- Túc Mạng Minh: History Search ---
+Search Timestamp: 2025-06-28 15:21:22
+File: .cursor/rules/rule-build-small-think-big-do-baby-steps.mdc
+History Path: /home/fong/.config/Cursor/User/History
+Found 1 historical versions.
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/490fd0a8/FE1A.mdc
+Timestamp: 2025-06-28 14:52:59.746000
+-----------------------------------------
+
+Search complete. Listed 1 versions.

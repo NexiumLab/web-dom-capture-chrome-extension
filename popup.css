@@ -1,0 +1,19 @@
+body {
+  width: 300px;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+.container {
+  text-align: center;
+}
+
+#loading-gif {
+  margin: 10px 0;
+  width: 50px;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+} 

@@ -1,0 +1,104 @@
+--- Túc Mạng Minh: History Search ---
+Search Timestamp: 2025-06-28 15:18:39
+File: .cursor/rules/__init.mdc
+History Path: /home/fong/.config/Cursor/User/History
+Found 32 historical versions.
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/u97f.mdc
+Timestamp: 2025-06-11 23:50:36.763000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/ZKB3.mdc
+Timestamp: 2025-06-11 23:52:02.608000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/f7fc.mdc
+Timestamp: 2025-06-11 23:53:23.202000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/kJC3.mdc
+Timestamp: 2025-06-11 23:53:44.738000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/82Jy.mdc
+Timestamp: 2025-06-14 01:25:30.777000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/eh8r.mdc
+Timestamp: 2025-06-14 01:43:46.222000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/UZ12.mdc
+Timestamp: 2025-06-14 01:44:28.098000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/R0Y5.mdc
+Timestamp: 2025-06-14 01:44:43.614000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/9YVD.mdc
+Timestamp: 2025-06-14 01:45:41.736000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/YBgJ.mdc
+Timestamp: 2025-06-14 01:46:49.984000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/5nnn.mdc
+Timestamp: 2025-06-14 01:49:31.055000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/iKVX.mdc
+Timestamp: 2025-06-14 01:50:02.802000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/H6HG.mdc
+Timestamp: 2025-06-14 01:50:30.779000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/6nsJ.mdc
+Timestamp: 2025-06-14 01:52:05.900000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/Z9xM.mdc
+Timestamp: 2025-06-14 01:53:53.581000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/UHjL.mdc
+Timestamp: 2025-06-14 01:55:27.664000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/9Mww.mdc
+Timestamp: 2025-06-14 01:56:42.785000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/oE74.mdc
+Timestamp: 2025-06-15 16:46:20.119000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/rPmm.mdc
+Timestamp: 2025-06-15 16:48:30.900000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/RqpX.mdc
+Timestamp: 2025-06-15 19:45:21.391000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/Ewij.mdc
+Timestamp: 2025-06-18 00:10:31.725000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/gjMr.mdc
+Timestamp: 2025-06-18 00:22:16.388000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/uQmQ.mdc
+Timestamp: 2025-06-18 00:53:41.573000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/RJxo.mdc
+Timestamp: 2025-06-28 14:54:16.390000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/U4nV.mdc
+Timestamp: 2025-06-28 14:55:52.760000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/oENC.mdc
+Timestamp: 2025-06-28 14:56:03.284000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/c0aH.mdc
+Timestamp: 2025-06-28 14:56:25.443000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/8IAt.mdc
+Timestamp: 2025-06-28 15:04:21.949000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/49M9.mdc
+Timestamp: 2025-06-28 15:04:37.010000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/40Mr.mdc
+Timestamp: 2025-06-28 15:05:48.874000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/5xBz.mdc
+Timestamp: 2025-06-28 15:06:00.818000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/1c164584/KwNN.mdc
+Timestamp: 2025-06-28 15:06:03.698000
+-----------------------------------------
+
+Search complete. Listed 32 versions.

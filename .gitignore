@@ -1,0 +1,20 @@
+# Log files
+*.log
+
+# Python cache
+py-server/__pycache__/
+
+# Captured DOM files
+captured_doms/
+
+# Backup files
+*.bak
+
+# Virtual environment
+py-server/.venv/
+
+# Node.js dependencies
+node_modules/
+
+# Bundled output
+dist/ 

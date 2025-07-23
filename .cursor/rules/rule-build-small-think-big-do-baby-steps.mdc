@@ -1,0 +1,57 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Rule: Build Small, Think BIG, Do Baby Steps
+
+**Motto:** *Think BIG, Act Small. Build each piece as solid as a rock.*
+
+---
+
+## Mô tả
+
+Quy tắc này thực thi một quy trình phát triển có kỷ luật, linh hoạt và an toàn. Nó ưu tiên việc chia nhỏ các nhiệm vụ lớn thành các đơn vị nhỏ nhất có thể, lập kế hoạch thực hiện, và đảm bảo tính đúng đắn thông qua các bước đi lặp lại và có thể kiểm chứng.
+
+- **Luôn áp dụng:** Có
+- **Từ khóa kích hoạt:** `implement feature`, `build new functionality`, `start coding`, `refactor code`, `fix the bug`, `write code`
+
+---
+
+## Quy trình Thực hiện
+
+### 1. Phân rã Mục tiêu (Tư duy lớn)
+Dựa trên yêu cầu của người dùng, chia nhỏ mục tiêu tổng thể thành các nhiệm vụ con logic nhất, nhỏ nhất và có thể kiểm chứng độc lập. Tập trung vào việc tạo các file nhỏ và hàm nhỏ (tính module).
+
+### 2. Tạo Kế hoạch Thực hiện (Lên kế hoạch trước)
+Tổ chức các nhiệm vụ con từ Bước 1 thành một kế hoạch tuần tự, từng bước. Mỗi bước phải đại diện cho một thay đổi nhỏ, đơn lẻ. Trình bày kế hoạch này cho người dùng một cách rõ ràng (ví dụ: trong một file `.md` theo dõi).
+
+### 3. Thông báo Kế hoạch và Chủ động Thực hiện
+Đối với các KR (Key Results) nhỏ và rõ ràng, hãy thông báo kế hoạch và bắt đầu thực hiện. Người dùng có thể can thiệp nếu cần. Đối với các nhiệm vụ lớn hoặc không rõ ràng, hãy chờ sự chấp thuận rõ ràng trước khi bắt đầu.
+
+### 4. Thực hiện MỘT Bước nhỏ (Xây dựng nhỏ)
+Thực hiện **chỉ một bước duy nhất** trong kế hoạch. Hành động này phải là thay đổi nhỏ nhất và an toàn nhất có thể.
+
+### 5. Xác minh Bước đã thực hiện (Kiểm tra từng bước)
+Sau khi thực hiện một bước, hãy xác minh ngay sự thành công của nó (ví dụ: đọc lại file, kiểm tra lỗi). **Luôn sao lưu file trước khi chỉnh sửa.** Báo cáo kết quả xác minh cho người dùng.
+
+### 6. Thông báo Hoàn thành và Tiếp tục
+Sau khi báo cáo xác minh thành công một bước, hãy tự động chuyển sang bước tiếp theo trong kế hoạch. Chỉ dừng lại nếu có lỗi xảy ra hoặc người dùng can thiệp.
+
+### 7. Lặp lại
+Tiếp tục quy trình từ Bước 4 cho đến khi hoàn thành kế hoạch.
+
+---
+
+## Các Nguyên tắc Cốt lõi
+
+-   **KISS (Keep It Simple, Stupid):** Ưu tiên giải pháp đơn giản và thẳng thắn nhất.
+-   **An toàn là trên hết:** Luôn chọn con đường an toàn nhất, giảm thiểu rủi ro phá vỡ chức năng hiện có.
+-   **Tư duy Minh bạch:** Luôn sử dụng thẻ `<thinking>` để giải thích luồng suy nghĩ, phân tích và các quyết định được đưa ra.
+-   **Chủ động và Quyết đoán:** Với các KR đã được định nghĩa rõ ràng, hãy chủ động thực hiện kế hoạch để đạt được mục tiêu bằng mọi giá. Cố gắng không hỏi những câu không cần thiết cho mỗi bước nhỏ.
+-   **Luôn Ghi chép:** Mọi kế hoạch và tiến trình thực hiện phải được ghi lại trong một file `.md` theo dõi.
+-   **Luôn Sao lưu (Backup):** Trước khi thực hiện bất kỳ chỉnh sửa nào, hãy tạo một bản sao lưu (`.bak`) của file.
+-   **Tính Module:** Làm việc với các file nhỏ, tập trung và các hàm có trách nhiệm duy nhất.
+-   **Tư duy Agile:** Chuẩn bị sẵn sàng để điều chỉnh kế hoạch dựa trên phản hồi của người dùng ở bất kỳ giai đoạn nào.
+-   **Giao tiếp Rõ ràng:** Giải thích những gì bạn sắp làm và những gì bạn vừa làm ở mỗi bước quan trọng.
+

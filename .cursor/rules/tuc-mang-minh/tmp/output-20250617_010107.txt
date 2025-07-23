@@ -1,0 +1,17 @@
+--- Túc Mạng Minh: History Search ---
+Search Timestamp: 2025-06-17 01:01:07
+File: /home/fong/Projects/fong-obsidian-notes/.cursor/rules/project.mdc
+History Path: /home/fong/.config/Cursor/User/History
+Found 3 historical versions.
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-154979f/Ibgk.mdc
+Timestamp: 2025-06-17 00:17:46.973000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-154979f/TK1Z.mdc
+Timestamp: 2025-06-17 00:18:48.252000
+-----------------------------------------
+Version: /home/fong/.config/Cursor/User/History/-154979f/bhyb.mdc
+Timestamp: 2025-06-17 00:19:39.551000
+-----------------------------------------
+
+Search complete. Listed 3 versions.

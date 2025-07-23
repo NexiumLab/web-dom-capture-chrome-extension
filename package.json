@@ -1,0 +1,21 @@
+{
+  "name": "web-dom-capture",
+  "version": "1.0.0",
+  "description": "A simple Chrome extension and Python server combination to capture the complete DOM of a webpage and save it locally.",
+  "main": "background.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1"
+  }
+}

@@ -1,0 +1,83 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Rule: File Versioning and Metadata
+
+## 1. Objective
+
+To standardize the process of adding metadata to all project files for consistent version control, change tracking, and easier identification of file purpose.
+
+## 2. Core Principles
+
+- **`uuid`**: A universally unique identifier, generated **only once** when the file is first created or when this rule is initially applied. It **must not** change.
+- **`last-edited`**: A human-readable timestamp, updated **every time** the file is modified.
+- **`by`**: The name of the person(s) who made the last edit. **Default to "Fong & Asi"** unless specified otherwise.
+- **`desc`** (Markdown only): A brief, one-line description of the file's purpose.
+
+## 3. Implementation by File Type
+
+### 3.1. For Code Files (.php, .js, .css, etc.)
+
+- **Location**: Metadata must be placed within a comment block at the **top of the file**. For `.php` files, the block must be placed immediately after the opening `<?php` tag.
+- **Content**: Must include `uuid`, `last-edited`, and `by`.
+- **Format**: The comment style must match the file's language.
+
+**Example for a `.php` file:**
+```php
+<?php
+/*
+uuid: 1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed
+last-edited: "03-Jul-2025, 03:15:00 PM GMT+7"
+by: Fong & Asi
+*/
+
+// ... rest of the code
+```
+
+**Example for a `.js` or `.css` file:**
+```javascript
+/*
+uuid: 1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed
+last-edited: "03-Jul-2025, 03:15:00 PM GMT+7"
+by: Fong & Asi
+*/
+
+// ... rest of the code
+```
+
+### 3.2. For Markdown Files (.md, .mdc)
+
+- **Location**: Metadata must be placed at the **end of the file**, separated from the main content by a `---` line. It is plain text, not YAML frontmatter.
+- **Content**: Must include `uuid`, `last-edited`, `by`, and `desc`.
+
+**Example for a `.md` or `.mdc` file:**
+```markdown
+... main content of the file ...
+
+---
+uuid: 3d7f8gbe-bbfd-4b2d-9b5d-ab8dfbbd5def
+last-edited: "03-Jul-2025, 03:17:00 PM GMT+7"
+by: Fong
+desc: "Mô tả ngắn gọn về mục đích của file markdown này."
+```
+
+## 4. Command Line Usage
+
+Use the following commands to generate the required metadata:
+
+- **To generate a new UUID**:
+  ```bash
+  uuidgen
+  ```
+
+- **To generate a human-readable timestamp (GMT+7)**:
+  ```bash
+  date '+%d-%b-%Y, %I:%M:%S %p GMT+7'
+  ```
+---
+uuid: 9fc50cc4-9a94-49bc-8efa-7b7073f45cc0
+last-edited: "03-Jul-2025, 02:54:00 PM GMT+7"
+by: Fong & Asi
+desc: "Quy tắc này định nghĩa cách thêm metadata vào các file để quản lý phiên bản và theo dõi thay đổi."

@@ -1,0 +1,163 @@
+---
+description: "Hướng dẫn hỗ trợ đa ngôn ngữ (Hàn, Trung) và tạo ghi chú Obsidian. Các thuật ngữ phải được tạo tự động từ ngữ cảnh."
+globs: []
+alwaysApply: true
+---
+
+uuid: 561f6c96-4c3f-4314-878f-e4b89e139bee
+last-edited: "${TIMESTAMP}"
+desc: "Hướng dẫn hỗ trợ đa ngôn ngữ (Hàn, Trung) và tạo ghi chú Obsidian. Các thuật ngữ phải được tạo tự động từ ngữ cảnh."
+
+# Rule: Multi-language Support (Korean & Chinese)
+
+## 1. Objective
+
+This rule ensures that when presenting educational content, key terms are displayed with phonetic guides in Chinese and Korean. It also standardizes the creation of a corresponding Obsidian note to centralize this knowledge.
+
+**[!!] Important Guideline: Dynamic Term Generation**
+The terms listed below are for **illustrative purposes only**. The AI must not use this static list. Instead, it must analyze the current conversation context (recent user queries and AI responses) to dynamically generate **3 technical terms** and **3 conversational verbs** that are most relevant to the ongoing task. This analysis is a mandatory prerequisite before creating the note.
+
+## 2. Technical Terms (Examples)
+
+1.  **API** /ˌeɪ.piːˈaɪ/ /Ây-Pi-Ai/ (Application Programming Interface):
+    - **Nghĩa**: Giao diện lập trình ứng dụng.
+    - **Trung**: 接口
+      _(jiēkǒu)_
+    - **Hàn**: API / 인터페이스
+      _(e-i-pi-ai / inteopeiseu)_
+
+## 3. Conversational Verbs (Examples)
+
+1.  **Run/Execute** /rʌn/, /ˈek.sɪ.kjuːt/ /Răn/, /Ếch-xì-kiu/:
+
+    - **Nghĩa**: Chạy / Thực thi.
+    - **Trung**: 运行
+      _(yùnxíng)_
+    - **Hàn**: 실행하다
+      _(silhaenghada)_
+      _(Xil-hêng-ha-đa)_
+
+2.  **Commit** /kəˈmɪt/ /Com-mít/:
+
+    - **Nghĩa**: Lưu thay đổi.
+    - **Trung**: 提交
+      _(tíjiāo)_
+    - **Hàn**: 커밋하다
+      _(keomithada)_
+      _(Kho-mit-ha-đa)_
+
+3.  **Deploy** /dɪˈplɔɪ/ /Đi-ploi/:
+    - **Nghĩa**: Triển khai.
+    - **Trung**: 部署
+      _(bùshǔ)_
+    - **Hàn**: 배포하다
+      _(baepohada)_
+      _(Pê-phô-ha-đa)_
+
+## 4. Obsidian Note Creation Workflow
+
+1.  **Context Analysis**: Before any action, analyze the recent conversation (<thinking>) to identify 3 relevant technical terms and 3 conversational verbs.
+2.  **Read Phonetics Rule**: Before populating the template, **MUST** read the file `./.cursor/rules/rule-hangul-to-vietnamese.md` to ensure accurate Vietnamese phonetic transcription for all Korean terms. Use the command:
+    ```bash
+    cat ./.cursor/rules/rule-hangul-to-vietnamese.md
+    ```
+3.  **Populate Template**: Use the dynamically generated terms from step 1 and the phonetics rules from step 2 to fill out the template provided in Section 5.
+4.  **Create Note**:
+    - **Action**: Create a new note in Obsidian with the populated content.
+    - **Sub-folder**: `/home/fong/Dropbox/Apps/remotely-save/FongObsidian/AI-notes/technical-glossary/`
+    - **Filename**: Use the format `YYYY-MM-DD-[description].md`. Example: `2023-10-27-multi-language-terms-ko-zh.md`.
+
+## 5. Obsidian Note Template
+
+```markdown
+---
+title: "Technical Glossary: Korean & Chinese"
+created: { { YYYY-MM-DD } }
+updated: { { YYYY-MM-DD } }
+aliases:
+  - "Thuật ngữ kỹ thuật Hàn-Trung"
+category: "Language-Learning"
+status: "published"
+---
+
+# Technical Glossary: Korean & Chinese
+
+This note contains a list of common technical and conversational terms with their translations in Chinese (Pinyin) and Korean (Romanization).
+
+## Technical Terms
+
+1.  **API** /ˌeɪ.piːˈaɪ/ /Ây-Pi-Ai/ (Application Programming Interface):
+
+    - **Nghĩa**: Giao diện lập trình ứng dụng.
+    - **Trung**: 接口
+      _(jiēkǒu)_
+    - **Hàn**: API / 인터페이스
+      _(e-i-pi-ai / inteopeiseu)_
+
+2.  **Database** /ˈdeɪ.tə.beɪs/ /Đây-ta-bây-s/:
+
+    - **Nghĩa**: Cơ sở dữ liệu.
+    - **Trung**: 数据库
+      _(shùjùkù)_
+    - **Hàn**: 데이터베이스
+      _(deiteobeiseu)_
+
+3.  **Function** /ˈfʌŋk.ʃən/ /Phăn-sần/:
+    - **Nghĩa**: Hàm.
+    - **Trung**: 函数
+      _(hánshù)_
+    - **Hàn**: 함수
+      _(hamsu)_
+
+## Conversational Verbs
+
+1.  **Run/Execute** /rʌn/, /ˈek.sɪ.kjuːt/ /Răn/, /Ếch-xì-kiu/:
+
+    - **Nghĩa**: Chạy / Thực thi.
+    - **Trung**: 运行
+      _(yùnxíng)_
+    - **Hàn**: 실행하다
+      _(silhaenghada)_
+      _(Xil-hêng-ha-đa)_
+
+2.  **Commit** /kəˈmɪt/ /Com-mít/:
+
+    - **Nghĩa**: Lưu thay đổi.
+    - **Trung**: 提交
+      _(tíjiāo)_
+    - **Hàn**: 커밋하다
+      _(keomithada)_
+      _(Kho-mit-ha-đa)_
+
+3.  **Deploy** /dɪˈplɔɪ/ /Đi-ploi/:
+    - **Nghĩa**: Triển khai.
+    - **Trung**: 部署
+      _(bùshǔ)_
+    - **Hàn**: 배포하다
+      _(baepohada)_
+      _(Pê-phô-ha-đa)_
+
+---
+
+## Prompter Suggestion
+
+### English
+
+**Prompter**: "Update the multilingual glossary rule with the specified terms and generate the corresponding knowledge base article in Obsidian."
+
+### Trung (Chinese)
+
+**提示 (Tíshì)**: 更新规则，添加新词，创建笔记。
+_(Gēngxīn guīzé, tiānjiā xīn cí, chuàngjiàn bǐjì.)_
+
+### Hàn (Korean)
+
+**제안 (Jean)**: 규칙에 새 단어 추가하고 노트 만드세요.
+_(Gyuchig-e sae dan-eo chugahago noteu mandeuseyo.)_
+_(Kyu-ch'i-kê xê tan-o ch'u-ka-ha-kô nô-thư man-đư-xê-yô.)_
+
+---
+
+_Ghi chú này được tạo tự động bởi AI (Asi)._
+tags: technical-glossary,korean,chinese,pinyin,romaji,api,database,function,devops
+```

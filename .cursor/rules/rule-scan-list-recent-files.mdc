@@ -1,0 +1,38 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Công cụ quét file code trong codebase Deutschfuns
+
+Script này giúp quét và hiển thị các file code mới nhất trong codebase Deutschfuns, giúp theo dõi các thay đổi gần đây.
+
+## Cách sử dụng
+# Quét các file được chỉnh sửa gần đây
+
+## Mục đích
+Quy tắc này cung cấp lệnh `find` để liệt kê các file được chỉnh sửa gần đây nhất trong dự án, giúp nhanh chóng xác định các thay đổi mới.
+
+## Lệnh cơ bản
+Lệnh này sẽ tìm kiếm tất cả các file trong thư mục hiện tại (`.`), loại trừ các thư mục ẩn và một số loại file không cần thiết, sau đó sắp xếp theo thời gian sửa đổi gần nhất.
+
+```bash
+find . -type f -not -path "*/\.*" ! -name "*.log" ! -name "*.bak" -printf "%T@ %p\n" | sort -n -r | head -n 20 | cut -d' ' -f2-
+```
+
+### Giải thích lệnh
+1.  `find . -type f`: Tìm tất cả các file trong thư mục hiện tại.
+2.  `-not -path "*/\.*"`: Loại trừ các thư mục và file ẩn (bắt đầu bằng dấu chấm).
+3.  `! -name "*.log" ! -name "*.bak"`: Loại trừ các file log và backup.
+4.  `-printf "%T@ %p\n"`: In ra thời gian sửa đổi (dưới dạng Unix timestamp) và đường dẫn file.
+5.  `sort -n -r`: Sắp xếp các dòng theo số (timestamp) theo thứ tự giảm dần (mới nhất lên đầu).
+6.  `head -n 20`: Lấy 20 kết quả đầu tiên.
+7.  `cut -d' ' -f2-`: Chỉ lấy phần đường dẫn file, loại bỏ timestamp.
+
+## Tùy chỉnh
+-   **Thay đổi số lượng file**: Thay đổi số `20` trong `head -n 20` thành số lượng bạn muốn.
+-   **Thay đổi thư mục tìm kiếm**: Thay đổi `.` thành đường dẫn thư mục cụ thể (ví dụ: `./wp-content/plugins/`).
+-   **Thêm/bớt loại file loại trừ**: Thêm hoặc xóa các điều kiện `! -name "..."`.
+-   **Giới hạn thời gian**: Thêm `-mmin -[số_phút]` hoặc `-mtime -[số_ngày]` để giới hạn thời gian tìm kiếm.
+    -   Ví dụ: Tìm các file được sửa trong 60 phút qua: `find . -type f -mmin -60 ...`
+    -   Ví dụ: Tìm các file được sửa trong 2 ngày qua: `find . -type f -mtime -2 ...`
