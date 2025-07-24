@@ -19,6 +19,7 @@ LOG_FILE = os.path.join(SERVER_DIR, 'server.log')
 
 # --- Instructions for Client ---
 LINUX_COMMAND_GUIDE = """Quick guide for inspecting the captured DOM file:
+- [RECOMMENDED] Hoặc dùng MCP "fong-long-file-reader" để đọc file dài
 - Check file size: `wc -l "{file_path}"`
 - For small files (<200 LOC), use `cat`. For larger files, use `less`, `sed` or `grep`.
 - For full instructions, view the first 100 lines of this file: `head -n 100 "{file_path}"`"""
@@ -31,6 +32,13 @@ VIEW_FILE_INSTRUCTIONS = """
 This guide provides common Linux commands to inspect and read the captured DOM HTML file.
 
 Commands below: {file_path}
+---------------------------------------------------------------------
+0.  [RECOMMENDED] Use MCP for Large Files
+---------------------------------------------------------------------
+    # If you have access to MCP "fong-long-file-reader", use it for large files
+    # This provides better analysis and reading experience for files >200 lines
+    # Simply mention the file path to your AI assistant with MCP access
+
 ---------------------------------------------------------------------
 1.  Check File Size & Basic Info
 ---------------------------------------------------------------------
