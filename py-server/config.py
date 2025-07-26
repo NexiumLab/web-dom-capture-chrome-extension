@@ -22,7 +22,13 @@ LINUX_COMMAND_GUIDE = """Quick guide for inspecting the captured DOM file:
 - [RECOMMENDED] Hoặc dùng MCP "fong-long-file-reader" để đọc file dài
 - Check file size: `wc -l "{file_path}"`
 - For small files (<200 LOC), use `cat`. For larger files, use `less`, `sed` or `grep`.
-- For full instructions, view the first 100 lines of this file: `head -n 100 "{file_path}"`"""
+- For full instructions, view the first 100 lines of this file: `head -n 100 "{file_path}"`
+
+--- DOM Content Extraction (HTML → Text) ---
+- [RECOMMENDED] Clean HTML to text: `lynx -dump -nolist "{file_path}"`
+- HTML to Markdown: `html2text "{file_path}"`
+- Extract body text only: `xmllint --html --xpath "string(//body)" "{file_path}" 2>/dev/null`
+- Remove HTML tags (simple): `sed -e 's/<[^>]*>//g' "{file_path}"`"""
 
 
 
@@ -83,4 +89,22 @@ Commands below: {file_path}
 ---------------------------------------------------------------------
     # Use w3m to render the HTML file in the terminal
     w3m {file_path}
+
+---------------------------------------------------------------------
+6.  Extract Clean Text Content from HTML (DOM → Text)
+---------------------------------------------------------------------
+    # [RECOMMENDED] Convert HTML to clean text (best quality)
+    lynx -dump -nolist {file_path}
+
+    # Convert HTML to Markdown format (may have encoding issues)
+    html2text {file_path}
+
+    # Extract only body text content (fast, clean)
+    xmllint --html --xpath "string(//body)" {file_path} 2>/dev/null
+
+    # Simple tag removal (basic, for small files only)
+    sed -e 's/<[^>]*>//g' {file_path}
+
+    # Save extracted text to new file
+    lynx -dump -nolist {file_path} > {file_path}.txt
 """ 
